@@ -31,17 +31,14 @@ class SignUpLoginContainer extends React.Component {
         ...this.state.fields,
         [event.target.name]: event.target.value
       }
-    }, () => console.log(this.state.fields))
+    })
   }
   
   handleSubmit = (event) => {
     event.preventDefault()
-    // debugger
-    console.log(this.state)
   }
   
   render() {
-    console.log(this.state)
     return (
       <div>
         {this.state.signup  ? <h2>Sign Up</h2> : <h2>Login</h2>}
